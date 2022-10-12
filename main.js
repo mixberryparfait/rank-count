@@ -20,7 +20,7 @@ function importFile(file) {
 				console.log(content);
 				var lines = content.split(/\r\n|\n/);
 				for(var j in lines) {
-					if(!lines[j].endsWith(",1"))
+					if(lines[j].trim().length > 0 && !lines[j].endsWith(",1"))
 						lines[j] += j == 0 ? ',1,1' : ',0,1';
 				}
 				content = lines.join("\n");
