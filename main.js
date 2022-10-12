@@ -21,7 +21,7 @@ function importFile(file) {
 				var lines = content.split(/\r\n|\n/);
 				for(var j in lines) {
 					if(lines[j].trim().length > 0 && !lines[j].endsWith(",1"))
-						lines[j] += j == 0 ? ',1,1' : ',0,1';
+						lines[j] += j == 0 ? ',1,1' : ',1,0';
 				}
 				content = lines.join("\n");
 
